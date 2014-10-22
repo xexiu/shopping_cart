@@ -3,16 +3,21 @@ class ShopCart
   def initialize
     @list_item = {}
   end
-  def addItem(name, quant)
+  def add_item(name, quant)
     return @list_item[name] = quant unless @list_item[name]
     @list_item[name] += quant
+  end
+  def remove_item(name, quant)
+    return @list_item[name] = quant unless @list_item[name]
+    @list_item[name] -= quant
   end
 end
 end
 
 my_cart = ShopCart.new
-my_cart.addItem("banana", 1)
+my_cart.add_item("banana", 9)
 # my_cart.addItem("banana", 1)
 puts my_cart.list_item
-my_cart.addItem("butter", 2)
+my_cart.add_item("butter", 2)
 puts my_cart.list_item
+puts my_cart.remove_item("banana", 5)
