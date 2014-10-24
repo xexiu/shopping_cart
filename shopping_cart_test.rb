@@ -16,4 +16,4 @@ puts '-'*100
 banana = Fruit.new "banana", "10"
 puts banana
 puts banana.price
-puts banana.discount
+puts banana.discount_percent

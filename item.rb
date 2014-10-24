@@ -1,5 +1,5 @@
 class Item
-  attr_accessor :price, :name
+  attr_accessor :price, :discount_percent, :name
   def initialize(name, price)
     @name = name
     @price = price || nil
