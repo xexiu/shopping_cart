@@ -1,3 +1,4 @@
+require "pry"
 class ShopCart
   attr_accessor :list_item
   def initialize
@@ -12,7 +13,8 @@ class ShopCart
     @list_item[name] -= quant
   end
 end
-end
+
+binding.pry
 
 my_cart = ShopCart.new
 my_cart.add_item("banana", 9)
