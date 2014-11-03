@@ -1,5 +1,5 @@
 require "./product_cart"
-class Housewares < Product
+class Houseware < Product
   def discount
     if @price > 100
       5

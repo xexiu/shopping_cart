@@ -8,6 +8,10 @@ class Product
   def discount # default 0
     0
   end
+
+  def discounted_price
+
+  end
 end
 
 Product.new('Banana', 10)
