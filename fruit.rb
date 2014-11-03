@@ -1,18 +1,9 @@
-require_relative "item.rb"
-class Fruit < Item
-  def initialize(name, price)
-    super(name, price)
-    @discount_percent = 10
-  end
-
-  def apply_discount?
-    if Date.today.wday > 0 && Date.today.wday < 5
-      return false
+class Fruit < Product
+  def discount
+    if Date.today.wday > 1 && Date.today.wday < 5
+      0
     else
-      return true
+      0.1
     end
-    # Metodo de Ben: return false if (Date.today.wday.between?(1,5)) true
-    # monday = 1
-    # friday = 5
   end
 end

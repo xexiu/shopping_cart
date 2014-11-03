@@ -1,25 +1,13 @@
-require "pry"
-class ShopCart
-  attr_accessor :list_item
-  def initialize
-    @list_item = {}
+# require "pry"
+class Product
+  attr_accessor :name, :price
+  def initialize(name, price)
+    @name = name
+    @price = name
   end
-  def add_item(name, quant)
-    return @list_item[name] = quant unless @list_item[name]
-    @list_item[name] += quant
-  end
-  def remove_item(name, quant)
-    return @list_item[name] = quant unless @list_item[name]
-    @list_item[name] -= quant
+  def discount
+    0
   end
 end
 
-binding.pry
-
-my_cart = ShopCart.new
-my_cart.add_item("banana", 9)
-# my_cart.addItem("banana", 1)
-puts my_cart.list_item
-my_cart.add_item("butter", 2)
-puts my_cart.list_item
-puts my_cart.remove_item("banana", 5)
+Product.new('Banana', 10)
